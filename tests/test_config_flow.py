@@ -2,12 +2,13 @@
 
 from unittest.mock import patch
 
-from custom_components.ble_surplife.const import DOMAIN
 from homeassistant import config_entries
 from homeassistant.const import CONF_ADDRESS
 from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResultType
 from pytest_homeassistant_custom_component.common import MockConfigEntry
+
+from custom_components.ble_surplife.const import DOMAIN
 
 from . import ADDRESS, NAME, make_service_info
 
