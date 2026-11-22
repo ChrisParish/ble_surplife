@@ -1,0 +1,24 @@
+{
+  "domain": "ble_surplife",
+  "name": "Surplife BLE",
+  "bluetooth": [
+    {
+      "connectable": true,
+      "local_name": "IOTBT*"
+    },
+    {
+      "connectable": true,
+      "manufacturer_id": 23042
+    }
+  ],
+  "codeowners": ["@ChrisParish"],
+  "config_flow": true,
+  "dependencies": ["bluetooth_adapters"],
+  "documentation": "https://github.com/ChrisParish/ble_surplife",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/ChrisParish/ble_surplife/issues",
+  "loggers": ["custom_components.ble_surplife"],
+  "requirements": [],
+  "version": "0.1.0"
+}

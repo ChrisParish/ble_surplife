@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check manifest version matches tag
+        run: |
+          version=$(jq -r .version custom_components/ble_surplife/manifest.json)
+          tag="${GITHUB_REF_NAME#v}"
+          if [ "$version" != "$tag" ]; then
+            echo "manifest version $version does not match tag $tag"; exit 1
+          fi
+      - name: Zip integration
+        run: cd custom_components/ble_surplife && zip -r ../../ble_surplife.zip .
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: ble_surplife.zip

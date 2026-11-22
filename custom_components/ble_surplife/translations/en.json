@@ -1,0 +1,22 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "description": "Choose a Surplife light to set up.",
+        "data": {
+          "address": "Device"
+        }
+      },
+      "bluetooth_confirm": {
+        "description": "Do you want to set up {name}?"
+      }
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "no_devices_found": "No supported Surplife lights found nearby",
+      "not_supported": "This device is not supported yet",
+      "auth_not_supported": "This device requires an encrypted connection, which is not supported yet"
+    }
+  }
+}

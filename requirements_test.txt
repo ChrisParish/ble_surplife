@@ -1,0 +1,11 @@
+pytest-homeassistant-custom-component
+# requirements of the bluetooth and usb components (not installed by the test harness)
+bleak
+bleak-retry-connector
+bluetooth-adapters
+bluetooth-auto-recovery
+bluetooth-data-tools
+dbus-fast
+habluetooth
+aiousbwatcher
+serialx
